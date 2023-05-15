@@ -1,0 +1,24 @@
+<div class="container">
+  <app-navbar></app-navbar>
+  <form class="d-flex row">
+    <div class="form-group col-10">
+      <label for="exampleInputEmail1">Enter Name</label>
+      <input 
+      type="text"
+      name="item"
+      class="form-control" 
+      placeholder="Enter name"
+      [(ngModel)]="todoValue"
+      (keyup.enter) = "addItem()"
+      />
+    </div>
+  
+    <div class="form-group col-2 mt-4">
+      <button type="submit" class="btn btn-primary" (click)="addItem()">Add</button>
+    </div>
+   
+  </form>
+  <app-list [list]="list" (deleteBtn)="deleteItem($event)"></app-list>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

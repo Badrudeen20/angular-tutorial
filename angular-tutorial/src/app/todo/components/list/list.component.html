@@ -1,0 +1,6 @@
+<ul class="list-group mt-2">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let item of list">
+      {{item.value}}
+      <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
+    </li>
+</ul>
